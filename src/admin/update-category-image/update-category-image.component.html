@@ -1,0 +1,28 @@
+<div class="container p-5">
+    <div class="border p-5">
+        <div class="text-center">
+            <h5>Update Category Image</h5>
+        </div>
+        <form action="" [formGroup]="addCategory">
+
+            <div class="form-group">
+                <label for="">Category Name:</label>
+                <input type="text" class="form-control" formControlName="categoryName">
+                <div *ngIf="addCategory.get('categoryName')?.invalid && addCategory.get('categoryName')?.touched" class="text-danger">
+                    Category Name is required.
+                  </div>            
+                </div>
+
+            <div class="form-group">
+                <label for="">Category Image:</label>
+                <input type="text" class="form-control" formControlName="categoryImage">
+                <div *ngIf="addCategory.get('categoryImage')?.invalid && addCategory.get('categoryImage')?.touched" class="text-danger">
+                    Category Image is required.
+                  </div> 
+            </div>
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-primary" [disabled]="addCategory.invalid" (click)="updateData(addCategory.value)">Update Data</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div>
+  <div class="row m-4 justify-content-center text-center ">
+    <div class="col-lg-3 col-md-6 col-sm-12 m-5" *ngFor="let item of date">
+      <div class="card shadow">
+        <div class="card-body main">
+          <h5 class="card-title">Thank you for your order!</h5>
+          <p class="card-text">Your order has been successfully placed.</p>
+          <hr>
+          <p class="card-title"><strong>Order Id: #159{{ item.id }}</strong></p>
+          <p class="card-text"><strong>Date of Order: {{ item.date |date }}</strong></p>
+          <p class="card-text"><strong>Address of order: {{ item.addObj |json }}</strong></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

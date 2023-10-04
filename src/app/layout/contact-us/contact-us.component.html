@@ -1,0 +1,40 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 p-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form [formGroup]="contactUsForm" (ngSubmit)="submitContactForm(contactUsForm.value)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" formControlName="name">
+            <!-- <div *ngIf="contactUsForm.get('name').invalid && contactUsForm.get('name').touched" class="text-danger">
+              Name is required.
+            </div> -->
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" formControlName="email">
+            <!-- <div *ngIf="contactUsForm.get('email').invalid && contactUsForm.get('email').touched" class="text-danger">
+              Please enter a valid email address.
+            </div> -->
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" formControlName="message"></textarea>
+            <!-- <div *ngIf="contactUsForm.get('message').invalid && contactUsForm.get('message').touched" class="text-danger">
+              Message is required.
+            </div> -->
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary" [disabled]="contactUsForm.invalid">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-center">Your Location</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d294339.0152300711!2d72.49917119967827!3d23.022505525029177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84802d5e1eb9%3A0x20f5849c32c24a38!2sAhmedabad%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sca!4v1621070144582!5m2!1sen!2sca"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+  

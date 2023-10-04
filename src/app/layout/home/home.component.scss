@@ -1,0 +1,17 @@
+// img{
+//     height:60%;
+// }
+
+.btnn{
+    padding: 10px;
+}
+
+img{
+    height: 100%; /* Fallback height for non-full-sized screens */
+  }
+
+  @media (min-width: 1200px) {
+    img {
+      height: 600px; /* Height for full-sized screens */
+    }
+  }

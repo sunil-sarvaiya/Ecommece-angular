@@ -1,0 +1,28 @@
+<!-- <div class="row m-5 justify-content-center">
+  <div class="col-md-3 m-3" *ngFor="let item of productData">
+    <div class="card shadow">
+      <div class="card-body">
+        <img src="{{item.img}}" alt="" class="img-fluid">
+        <h5 class="card-title">Title: {{item.title}}</h5>
+        <p class="card-text">Price: {{item.price}}</p>
+        <a class="btn btn-primary">Add to cart</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="row m-5 justify-content-center ">
+  <div class="col-md-3 m-3" *ngFor="let category of categoryList">
+    <div class="card shadow">
+      <div class="card-body main">
+          <img src={{category.img}} class="img-fluid shadow">
+          <h3 class="card-title">Name: {{ category.title }}</h3>
+          <h6 class="card-title">Category: {{category.cat}}</h6>
+          <p class="card-text">Price: {{ category.price |currency:'INR' }}</p>
+          <p class="card-text">offer: {{category.offer}}</p>
+          <button class="btn btn-primary" (click)="addDataToCart(category)">Add to cart</button>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+<app-sidebar></app-sidebar>
+
+
+<div class="container mt-5 border p-5 shadow-lg">
+  <h2 class="text-center " *ngIf="forSubmitButton">Add Address Form</h2>
+  <h2 class="text-center " *ngIf="forUpdateButton">Update Address Form</h2>
+  <form [formGroup]="userForm" class="mt-4">
+
+    <div class="row">
+
+      <div class="form-group col-6">
+        <label for="username">Name:</label>
+        <input type="text" id="username" formControlName="username" class="form-control">
+        <div *ngIf="userForm.get('username').invalid && userForm.get('username').touched" class="text-danger">
+          <div *ngIf="userForm.get('username').errors.required">Username is required</div>
+        </div>
+      </div>
+
+      <div class="form-group col-6">
+        <label for="homeNumber">Home Number:</label>
+        <input type="text" id="homeNumber" formControlName="homeNumber" class="form-control">
+        <div *ngIf="userForm.get('homeNumber').invalid && userForm.get('homeNumber').touched" class="text-danger">
+          <div *ngIf="userForm.get('homeNumber').errors.required">Home Number is required</div>
+        </div>
+      </div>
+
+    </div>
+   
+<div class="row">
+
+  
+  <div class="form-group col-6">
+    <label for="villageName">Village Name:</label>
+    <input type="text" id="villageName" formControlName="villageName" class="form-control">
+    <div *ngIf="userForm.get('villageName').invalid && userForm.get('villageName').touched" class="text-danger">
+      <div *ngIf="userForm.get('villageName').errors.required">Village Name is required</div>
+    </div>
+  </div>
+
+  <div class="form-group col-6">
+    <label for="pincode">Pincode:</label>
+    <input type="text" id="pincode" formControlName="pincode" class="form-control">
+    <div *ngIf="userForm.get('pincode').invalid && userForm.get('pincode').touched" class="text-danger">
+      <div *ngIf="userForm.get('pincode').errors.required">Pincode is required</div>
+      <div *ngIf="userForm.get('pincode').hasError('pattern')">Pincode must be a 6-digit number</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="form-group col-6">
+    <label for="districtName">District Name:</label>
+    <input type="text" id="districtName" formControlName="districtName" class="form-control">
+    <div *ngIf="userForm.get('districtName').invalid && userForm.get('districtName').touched" class="text-danger">
+      <div *ngIf="userForm.get('districtName').errors.required">District Name is required</div>
+    </div>
+  </div>
+
+  <div class="form-group col-6">
+    <label for="stateName">State Name:</label>
+    <input type="text" id="stateName" formControlName="stateName" class="form-control">
+    <div *ngIf="userForm.get('stateName').invalid && userForm.get('stateName').touched" class="text-danger">
+      <div *ngIf="userForm.get('stateName').errors.required">State Name is required</div>
+    </div>
+  </div>
+
+</div>
+ 
+
+
+
+    <div class="text-center mt-3">
+      <button type="submit" (click)="onSubmit(userForm.value)"  [disabled]="userForm.invalid" class="btn btn-primary " *ngIf="forSubmitButton">Submit</button>
+      <button type="submit" (click)="UpdateData(userForm.value)" [disabled]="userForm.invalid" class="btn btn-primary" *ngIf="forUpdateButton">UpDate</button>
+    </div>
+
+
+    
+
+  </form>
+</div>
+
+<!-- for show address data  -->
+
+<div class="row m-5 justify-content-center">
+  <div class="col-md-3 m-3" *ngFor="let item of addressData">
+    <div class="card shadow ">
+      <div class="card-body main">
+        <h5 class="card-title">Name: {{item.username}}</h5>
+        <h5 class="card-title">District: {{item.districtName}}</h5>
+        <h5 class="card-title">Home-number: {{item.homeNumber}}</h5>
+        <h5 class="card-title">Village name: {{item.villageName}}</h5>
+        <h5 class="card-title">Pin code: {{item.pincode}}</h5>
+        <h5 class="card-title">State name: {{item.stateName}}</h5>
+
+        <div class="text-center">
+          <button class="btn btn-primary m-3" (click)="deleteAddress(item.id)">Delete</button>
+          <button class="btn btn-primary m-3" (click)="updateAddress(item)">Update</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="table-responsive p-3 ">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Category</th>
+        <th>Title</th>
+        <th>Price</th>
+        <td>Delete</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of cartData">
+        <td class="img-fluid "><img src="{{ category.img }}" alt="" ></td>
+        <td>{{ category.cat }}</td>
+        <td>{{ category.title }}</td>
+        <td>{{ category.price | currency:'INR' }}</td>
+        <td class="remove" (click)="deleteItem(category.id)">X</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row py-5 p-4 rounded shadow-sm">
+  <div class="col-lg-6">
+    <!-- Left column content here -->
+  </div>
+  <div class="col-lg-6">
+    <div class="bg-primary rounded-pill px-4 py-3 text-uppercase font-weight-bold text-center text-white">Order summary</div>
+    <div class="p-4">
+      <ul class="list-unstyled mb-4">
+        <li class="d-flex justify-content-between py-3 border-bottom">
+          <strong class="text-muted">Amount:</strong>
+          <strong>{{subTotal | currency:'INR'}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+          <strong class="text-muted">Tax:</strong>
+          <strong>{{tax | currency:'INR'}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+          <strong class="text-muted">Delivery Charge:</strong>
+          <strong>{{deliveryCharge | currency:'INR'}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+          <strong class="text-muted">Discount:</strong>
+          <strong>{{discount | currency:"INR"}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+          <strong class="text-muted">Total:</strong>
+          <h5 class="font-weight-bold">{{totalPrice | currency:'INR'}}</h5>
+        </li>
+      </ul>
+      <div class="text-center">
+
+      <button routerLink="/cart/checkout" class="btn btn-primary checkout">Checkout</button>
+
+      </div>
+    </div>
+  </div>
+</div>

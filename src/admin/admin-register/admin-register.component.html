@@ -1,0 +1,105 @@
+<section class="mt-0 align-items-center d-flex bg-dark"
+  style="min-height: 100vh; background-size: cover; background-image: url(https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1920&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=c0d43804e2c7c93143fe8ff65398c8e9);">
+  <div class="container-fluid">
+    <div class="row  justify-content-center align-items-center d-flex-row text-center h-100">
+      <div class="col-12 col-md-4 col-lg-3   h-50 ">
+        <div class="card shadow">
+          <div class="card-body mx-auto">
+            <h4 class="card-title mt-3 mb-4 text-center">Admin Register</h4>
+
+            <form [formGroup]="registerForm" (ngSubmit)="registrationData(registerForm.value)">
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="First name" type="text" formControlName="firstname">
+              </div>
+              <div *ngIf="registerForm.get('firstname').invalid && registerForm.get('firstname').touched"
+                class="text-danger mb-3">
+                first name is required
+              </div>
+
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="Last name" type="text" formControlName="lastname">
+              </div>
+              <div *ngIf="registerForm.get('lastname').invalid && registerForm.get('lastname').touched"
+                class="text-danger mb-3">
+                last name is required
+              </div>
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="Enter your email" type="email" formControlName="email">
+              </div>
+              <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched"
+                class="text-danger mb-3">
+                email is required
+              </div>
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input class="form-control" placeholder="password" type="password" formControlName="password">
+              </div>
+              <div *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched"
+                class="text-danger mb-3">
+                Password is required
+              </div>
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="User name" type="text" formControlName="username">
+              </div>
+              <div *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched"
+                class="text-danger mb-3">
+                Username is required
+              </div>
+
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <select class="form-control" id="gender" formControlName="gender">
+                  <option value="">Select your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div *ngIf="registerForm.get('gender').invalid && registerForm.get('gender').touched"
+                class="text-danger mb-3">
+                Gender is required
+              </div>
+
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" [disabled]="registerForm.invalid">
+                  Login</button>
+              </div>
+              <p class="text-center">Already have an Account?
+                <a routerLink="/admin/admin-login">Login here</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<div class="">
+    <div class="float-left">
+        <app-sidebar></app-sidebar>
+    </div>
+</div>
+
+<div class="table-responsive p-3">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Order Id</th>
+          <th>Date of Order</th>
+          <th>Products</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let orders of ordersDetail">
+          <td>{{ orders.id }}</td>
+          <td>{{ orders.date | date }}</td>
+          <td>
+            <ul *ngFor="let item of cartData">
+              <li>{{item.title}}</li>
+            </ul>
+          </td>
+          <td>{{ orders.addObj | json }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>

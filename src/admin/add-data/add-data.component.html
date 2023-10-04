@@ -1,0 +1,56 @@
+<div class="text-center mt-5">
+  <button class="btn btn-primary" routerLink="/admin/show-data">Show All Data</button>
+</div>
+
+<div class="container border m-5 p-5">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="container mt-4">
+        <div class="form-group">
+          <label for="catText">Category:</label>
+          <input type="text" id="catText" formControlName="cat" class="form-control" />
+          <div *ngIf="form.get('catText')?.invalid && form.get('catText')?.touched" class="text-danger">
+            Cat Text is required.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="img">Image:</label>
+          <input type="text" id="img" formControlName="img" class="form-control" />
+          <div *ngIf="form.get('img')?.invalid && form.get('img')?.touched" class="text-danger">
+            Image is required.
+          </div>
+        </div>
+
+        
+        
+        <div class="form-group">
+          <label for="titleText">Title:</label>
+          <input type="text" id="titleText" formControlName="title" class="form-control" />
+          <div *ngIf="form.get('titleText')?.invalid && form.get('titleText')?.touched" class="text-danger">
+            Title Text is required.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="priceText">Price:</label>
+          <input type="number" id="priceText" formControlName="price" class="form-control" />
+          <div *ngIf="form.get('priceText')?.invalid && form.get('priceText')?.touched" class="text-danger">
+            Price Text is required.
+          </div>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="offerText">Offer:</label>
+          <input type="text" id="offerText" formControlName="offer" class="form-control" />
+          <div *ngIf="form.get('offerText')?.invalid && form.get('offerText')?.touched" class="text-danger">
+            Offer Text is required.
+          </div>
+        </div>
+        <div class="text-center mt-5">
+            <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Submit</button>
+        </div>
+       
+      </form>
+
+</div>
+  

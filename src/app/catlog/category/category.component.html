@@ -1,0 +1,25 @@
+<div class="row m-5 justify-content-center ">
+  <div class="col-md-3 m-3" *ngFor="let item of categoryData">
+    <div class="card shadow ">
+      <div class="card-body main">
+        <img src="{{item.img}}" alt="missing image" class="img-fluid">
+        <h5 class="card-title">{{item.title}}</h5>
+        <button class="btn btn-primary" routerLink="/catlog/product-list/{{item.id}}">show product list</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row m-5 justify-content-center ">
+  <div class="col-md-3 m-3" *ngFor="let item of uniqueArray">
+    <div class="card shadow ">
+      <div class="card-body main">
+        <img src="/assets/dummy.jpg" alt="missing image" class="img-fluid">
+        <h5 class="card-title">{{item}}</h5>
+        <button class="btn btn-primary" routerLink="/catlog/extra/{{item}}">show product list</button>
+      </div>
+    </div>
+  </div>
+</div>
+

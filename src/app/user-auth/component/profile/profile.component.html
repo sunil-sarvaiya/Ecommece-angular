@@ -1,0 +1,64 @@
+<app-sidebar></app-sidebar>
+
+<div class="container mt-5 mb-5 shadow-lg ">
+  <h2 class="text-center mt-5">Profile Update Form</h2>
+  <form [formGroup]="profileForm" class="m-5" (ngSubmit)="updateProfileData(profileForm.value)">
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" class="form-control" id="firstname" placeholder="Enter your first name"
+        formControlName="firstname">
+      <div *ngIf="profileForm.get('firstname').invalid && profileForm.get('firstname').touched" class="text-danger">
+        First Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" class="form-control" id="lastname" placeholder="Enter your last name"
+        formControlName="lastname">
+      <div *ngIf="profileForm.get('lastname').invalid && profileForm.get('lastname').touched" class="text-danger">
+        Last Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter your email" formControlName="email">
+      <div *ngIf="profileForm.get('email').invalid && profileForm.get('email').touched" class="text-danger">
+        Please enter a valid email
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter your password"
+        formControlName="password">
+      <div *ngIf="profileForm.get('password').invalid && profileForm.get('password').touched" class="text-danger">
+        Password is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter your username" #user
+        formControlName="username">
+      <div *ngIf="profileForm.get('username').invalid && profileForm.get('username').touched" class="text-danger">
+        Username is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select class="form-control" id="gender" formControlName="gender">
+        <option value="">Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <div *ngIf="profileForm.get('gender').invalid && profileForm.get('gender').touched" class="text-danger">
+        Please select your gender
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <button type="submit" class="btn btn-primary" [disabled]="profileForm.invalid"
+        (click)="getUserName(user.value)">Update Profile</button>
+    </div>
+  </form>
+</div>

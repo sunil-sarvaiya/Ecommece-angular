@@ -1,0 +1,49 @@
+<div class="text-center mt-5">
+    <button class="btn btn-primary mx-5" routerLink="/admin/add-data">Add Product Data</button>
+    <button class="btn btn-primary mx-5" routerLink="/admin/add-category-image">Add category Image</button>
+
+  </div>
+
+  <div class="text-center mt-5">
+    <h1>--- Product data ---</h1>
+  </div>
+  
+<div class="row m-5 justify-content-center  ">
+    <div class="col-md-3 m-3 " *ngFor="let item of allProducts">
+        <div class="card shadow ">
+            <div class="card-body main">
+                <img src="{{item.img}}" alt="missing image" class="img-fluid">
+                <h5 class="card-title">Name: {{item.title}}</h5>
+                <h6 class="card-title">Category: {{item.cat}}</h6>
+                <h6 class="card-title">Price: {{item.price}}</h6>
+                <h6 class="card-title">Offer: {{item.offer}}</h6>
+                <div class="text-center">
+                    <button class="btn btn-primary m-4" routerLink="/admin/update-data/{{item.id}}">Update</button>
+                    <button class="btn btn-danger m-4" (click)="deleteData(item.id)">Delete</button>
+                </div>
+      
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="text-center mt-5">
+  <h1>--- Category Image data ---</h1>
+</div>
+
+
+<div class="row m-5 justify-content-center ">
+  <div class="col-md-3 m-3" *ngFor="let item of categoryImageData">
+    <div class="card shadow ">
+      <div class="card-body main">
+        <img src="{{item.categoryImage}}" alt="missing image" class="img-fluid">
+        <h5 class="card-title">Category Name: {{item.categoryName}}</h5>
+        <div class="text-center">
+          <button class="btn btn-primary m-4" routerLink="/admin/update-category-image/{{item.id}}">Update</button>
+          <button class="btn btn-danger m-4" (click)="deleteCtegoryImageData(item.id)">Delete</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

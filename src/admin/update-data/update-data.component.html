@@ -1,0 +1,50 @@
+update
+<div class="container border m-5 p-5">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="container mt-4">
+        <div class="form-group">
+          <label for="cat">Category:</label>
+          <input type="text" id="cat" formControlName="cat" class="form-control" />
+          <div *ngIf="form.get('cat')?.invalid && form.get('cat')?.touched" class="text-danger">
+            Cat Text is required.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="img">Image:</label>
+          <input type="text" id="img" formControlName="img" class="form-control" />
+          <div *ngIf="form.get('img')?.invalid && form.get('img')?.touched" class="text-danger">
+            Image is required.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" formControlName="title" class="form-control" />
+          <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched" class="text-danger">
+            Title Text is required.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" id="priceText" formControlName="price" class="form-control" />
+          <div *ngIf="form.get('price')?.invalid && form.get('price')?.touched" class="text-danger">
+            Price Text is required.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="offer">Offer:</label>
+          <input type="text" id="offer" formControlName="offer" class="form-control" />
+          <div *ngIf="form.get('offer')?.invalid && form.get('offer')?.touched" class="text-danger">
+            Offer Text is required.
+          </div>
+        </div>
+        <div class="text-center mt-5">
+            <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Submit</button>
+        </div>
+       
+      </form>
+
+</div>
+  

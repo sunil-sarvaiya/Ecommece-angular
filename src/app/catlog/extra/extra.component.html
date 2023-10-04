@@ -1,0 +1,12 @@
+<div class="row m-5 justify-content-center  ">
+  <div class="col-md-3 m-3 " *ngFor="let item of allProducts">
+    <div class="card shadow ">
+      <div class="card-body main">
+        <img src="{{item.img}}" alt="missing image" class="img-fluid">
+        <h5 class="card-title">Name: {{item.title}}</h5>
+        <h6 class="card-title">Category: {{item.cat}}</h6>
+        <button routerLink="/catlog/product-details/{{item.id}}" class="btn btn-primary">show details</button>
+      </div>
+    </div>
+  </div>
+</div>
