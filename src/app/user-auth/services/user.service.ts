@@ -1,51 +1,41 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/app/Environment/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import{Subject} from 'rxjs'
+import { Subject } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
-  baseURL=environment.base;
-  registerURL=environment.register;
-
-  constructor( private http:HttpClient) {  }
-
-  registrationData(data:any){
-    return this.http.post(this.baseURL+this.registerURL,data)
-  }
-
+  baseURL = environment.base;
+  registerURL = environment.register;
   sub = new Subject()
 
-  loginData(){
-    return this.http.get(this.baseURL+this.registerURL)
+  constructor(private http: HttpClient) { }
+
+  registrationData(data: any) {
+    return this.http.post(this.baseURL + this.registerURL, data)
   }
-
-  getProfileDataById(id:any){
-   return this.http.get(`http://localhost:3000/registrationData/${id}`)
+  loginData() {
+    return this.http.get(this.baseURL + this.registerURL)
   }
-
-  updateProfileData(data:any){
-    return this.http.put(`http://localhost:3000/registrationData/${data.id}`,data)
+  getProfileDataById(id: any) {
+    return this.http.get(`http://localhost:3000/registrationData/${id}`)
   }
-
-  postAddress(data:any){
-    return this.http.post("http://localhost:3000/addressData",data)
+  updateProfileData(data: any) {
+    return this.http.put(`http://localhost:3000/registrationData/${data.id}`, data)
   }
-
-// update address data 
-
-getAddress(){
-  return this.http.get("http://localhost:3000/addressData")
-}
-
-  updateAddress(id:any,data:any){
-    return this.http.put<any>(`http://localhost:3000/addressData/${id}`,data)
+  postAddress(data: any) {
+    return this.http.post("http://localhost:3000/addressData", data)
   }
-
-  deleteAddress(id:any){
+  // update address data 
+  getAddress() {
+    return this.http.get("http://localhost:3000/addressData")
+  }
+  updateAddress(id: any, data: any) {
+    return this.http.put<any>(`http://localhost:3000/addressData/${id}`, data)
+  }
+  deleteAddress(id: any) {
     return this.http.delete(`http://localhost:3000/addressData/${id}`)
   }
 }

@@ -5,7 +5,6 @@ import { CartModule } from './cart/cart.module';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { HomeComponent } from './layout/home/home.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -35,9 +34,7 @@ const routes: Routes = [
     path: '**',
     component: PageNotFoundComponent
   }
-
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

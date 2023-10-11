@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import{HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { UserAuthModule } from './user-auth/user-auth.module';
 import { CartModule } from './cart/cart.module';
 // import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -33,10 +28,8 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
     BrowserAnimationsModule,
     NgxUiLoaderModule,
     NgxUiLoaderHttpModule.forRoot({
-      showForeground:true,
+      showForeground: true,
     }),
-  
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

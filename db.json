@@ -24,37 +24,37 @@
   "productList": [
     {
       "id": 1,
-      "img": "/assets/about.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872188/project%20data/images/extra/about.png",
       "title": "sunil1",
       "price": 100
     },
     {
       "id": 2,
-      "img": "/assets/about.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872188/project%20data/images/extra/about.png",
       "title": "sunil2",
       "price": 200
     },
     {
       "id": 3,
-      "img": "/assets/about.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872188/project%20data/images/extra/about.png",
       "title": "sunil3",
       "price": 300
     },
     {
       "id": 4,
-      "img": "/assets/about.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872188/project%20data/images/extra/about.png",
       "title": "sunil4",
       "price": 400
     },
     {
       "id": 5,
-      "img": "/assets/about.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872188/project%20data/images/extra/about.png",
       "title": "sunil5",
       "price": 500
     },
     {
       "id": 6,
-      "img": "/assets/about.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872188/project%20data/images/extra/about.png",
       "title": "sunil6",
       "price": 600
     }
@@ -62,26 +62,26 @@
   "categoryList": [
     {
       "id": 1,
-      "img": "/assets/fruits/fruits.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871968/project%20data/images/fruits/fruits.jpg",
       "title": "Fruits",
       "productList": [
         {
-          "pid": 11,
-          "img": "/assets/fruits/apple.jpg",
+          "pid": 1,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871968/project%20data/images/fruits/apple.jpg",
           "title": "Apple",
           "price": 100,
           "offer": 0
         },
         {
-          "pid": 12,
-          "img": "/assets/fruits/banana.jpg",
+          "pid": 2,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871973/project%20data/images/fruits/banana.jpg",
           "title": "Banana",
           "price": 200,
           "offer": 0
         },
         {
-          "pid": 13,
-          "img": "/assets/fruits/grapes.jpg",
+          "pid": 3,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871969/project%20data/images/fruits/grapes.jpg",
           "title": "Grapes",
           "price": 100,
           "offer": 0
@@ -90,26 +90,26 @@
     },
     {
       "id": 2,
-      "img": "/assets/vegetables/vegetable.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872063/project%20data/images/vegetables/vegetable.jpg",
       "title": "Vegetables",
       "productList": [
         {
-          "pid": 14,
-          "img": "/assets/vegetables/potato.png",
+          "pid": 4,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872075/project%20data/images/vegetables/potato.png",
           "title": "Potato",
           "price": 100,
           "offer": 0
         },
         {
-          "pid": 15,
-          "img": "/assets/vegetables/tomato.jpg",
+          "pid": 5,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872062/project%20data/images/vegetables/tomato.jpg",
           "title": "Tomato",
           "price": 200,
           "offer": 0
         },
         {
-          "pid": 16,
-          "img": "/assets/vegetables/onion.jpg",
+          "pid": 6,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872063/project%20data/images/vegetables/onion.jpg",
           "title": "Onion",
           "price": 200,
           "offer": 0
@@ -118,26 +118,26 @@
     },
     {
       "id": 3,
-      "img": "/assets/cloths/cloths.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871669/project%20data/images/cloths/cloths.jpg",
       "title": "Cloths",
       "productList": [
         {
-          "pid": 17,
-          "img": "/assets/cloths/shirt.jpg",
+          "pid": 7,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871667/project%20data/images/cloths/shirt.jpg",
           "title": "Shirt",
           "price": 100,
           "offer": 0
         },
         {
-          "pid": 18,
-          "img": "/assets/cloths/tshirt.jpg",
+          "pid": 8,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871667/project%20data/images/cloths/tshirt.jpg",
           "title": "T-Shirt",
           "price": 200,
           "offer": 0
         },
         {
-          "pid": 19,
-          "img": "/assets/cloths/jeans.jpg",
+          "pid": 9,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871667/project%20data/images/cloths/jeans.jpg",
           "title": "Jeans",
           "price": 200,
           "offer": 0
@@ -146,26 +146,26 @@
     },
     {
       "id": 4,
-      "img": "/assets/electric/electric.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871939/project%20data/images/electric/electic.jpg",
       "title": "Electronics",
       "productList": [
         {
-          "pid": 20,
-          "img": "/assets/electric/washing-machine.jpg",
+          "pid": 10,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871939/project%20data/images/electric/washing-machine.jpg",
           "title": "Washing Machine",
           "price": 100,
           "offer": 0
         },
         {
-          "pid": 21,
-          "img": "/assets/electric/fridge.jpg",
+          "pid": 11,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871938/project%20data/images/electric/fridge.jpg",
           "title": "Refrigerator",
           "price": 200,
           "offer": 0
         },
         {
-          "pid": 22,
-          "img": "/assets/electric/blender.jpg",
+          "pid": 12,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871938/project%20data/images/electric/blender.jpg",
           "title": "Blender",
           "price": 100,
           "offer": 0
@@ -174,26 +174,26 @@
     },
     {
       "id": 5,
-      "img": "/assets/digital/digital.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/digital.jpg",
       "title": "Digital",
       "productList": [
         {
-          "pid": 23,
-          "img": "/assets/digital/laptop.jpg",
+          "pid": 13,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/laptop.jpg",
           "title": "Laptop",
           "price": 100,
           "offer": 0
         },
         {
-          "pid": 24,
-          "img": "/assets/digital/mobile.jpg",
+          "pid": 14,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/mobile.jpg",
           "title": "Mobile",
           "price": 200,
           "offer": 0
         },
         {
-          "pid": 25,
-          "img": "/assets/digital/tablet.jpg",
+          "pid": 15,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/tablet.jpg",
           "title": "Tablet",
           "price": 100,
           "offer": 0
@@ -202,27 +202,27 @@
     },
     {
       "id": 6,
-      "img": "/assets/sports/sports.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872005/project%20data/images/sports/sports.jpg",
       "title": "Sports",
       "productList": [
         {
-          "pid": 26,
-          "img": "/assets/sports/bat-ball.jpg",
+          "pid": 16,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872003/project%20data/images/sports/bat-ball.jpg",
           "title": "Bat and Ball",
           "price": 100,
           "offer": 0
         },
         {
-          "pid": 27,
-          "img": "/assets/sports/badminton.jpg",
+          "pid": 17,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872020/project%20data/images/sports/badminton.jpg",
           "title": "Badminton",
           "price": 200,
           "offer": 0
         },
         {
-          "pid": 28,
-          "img": "/assets/sports/football.jpg",
-          "title": "Football",
+          "pid": 18,
+          "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872006/project%20data/images/sports/football.jpg",
+          "title": "Football shbhdb",
           "price": 100,
           "offer": 0
         }
@@ -233,7 +233,7 @@
     {
       "id": 1,
       "cat": "Fruits",
-      "img": "/assets/fruits/apple.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871968/project%20data/images/fruits/apple.jpg",
       "title": "Apple",
       "price": 100,
       "offer": 5
@@ -241,7 +241,7 @@
     {
       "id": 2,
       "cat": "Fruits",
-      "img": "/assets/fruits/banana.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871973/project%20data/images/fruits/banana.jpg",
       "title": "Banana",
       "price": 200,
       "offer": 5
@@ -249,7 +249,7 @@
     {
       "id": 3,
       "cat": "Fruits",
-      "img": "/assets/fruits/grapes.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871969/project%20data/images/fruits/grapes.jpg",
       "title": "Grapes",
       "price": 100,
       "offer": 5
@@ -257,14 +257,14 @@
     {
       "id": 4,
       "cat": "Vegetables",
-      "img": "/assets/vegetables/potato.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872075/project%20data/images/vegetables/potato.png",
       "title": "Potato",
       "price": 100,
       "offer": 5
     },
     {
       "cat": "Vegetables",
-      "img": "/assets/vegetables/tomato.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872062/project%20data/images/vegetables/tomato.jpg",
       "title": "Tomato",
       "price": 300,
       "offer": "5",
@@ -272,7 +272,7 @@
     },
     {
       "cat": "Vegetables",
-      "img": "/assets/vegetables/onion.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872063/project%20data/images/vegetables/onion.jpg",
       "title": "Onion",
       "price": 200,
       "offer": "6",
@@ -281,7 +281,7 @@
     {
       "id": 7,
       "cat": "Cloths",
-      "img": "/assets/cloths/shirt.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871667/project%20data/images/cloths/shirt.jpg",
       "title": "Shirt",
       "price": 100,
       "offer": 5
@@ -289,7 +289,7 @@
     {
       "id": 8,
       "cat": "Cloths",
-      "img": "/assets/cloths/tshirt.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871667/project%20data/images/cloths/tshirt.jpg",
       "title": "T-Shirt",
       "price": 200,
       "offer": 5
@@ -297,7 +297,7 @@
     {
       "id": 9,
       "cat": "Cloths",
-      "img": "/assets/cloths/jeans.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871667/project%20data/images/cloths/jeans.jpg",
       "title": "Jeans",
       "price": 200,
       "offer": 5
@@ -305,7 +305,7 @@
     {
       "id": 10,
       "cat": "Electronics",
-      "img": "/assets/electric/washing-machine.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871939/project%20data/images/electric/washing-machine.jpg",
       "title": "Washing Machine",
       "price": 100,
       "offer": 5
@@ -313,7 +313,7 @@
     {
       "id": 11,
       "cat": "Electronics",
-      "img": "/assets/electric/fridge.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871938/project%20data/images/electric/fridge.jpg",
       "title": "Refrigerator",
       "price": 200,
       "offer": 5
@@ -321,7 +321,7 @@
     {
       "id": 12,
       "cat": "Electronics",
-      "img": "/assets/electric/blender.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871938/project%20data/images/electric/blender.jpg",
       "title": "Blender",
       "price": 100,
       "offer": 5
@@ -329,7 +329,7 @@
     {
       "id": 13,
       "cat": "Digital",
-      "img": "/assets/digital/laptop.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/laptop.jpg",
       "title": "Laptop",
       "price": 100,
       "offer": 5
@@ -337,7 +337,7 @@
     {
       "id": 14,
       "cat": "Digital",
-      "img": "/assets/digital/mobile.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/mobile.jpg",
       "title": "Mobile",
       "price": 200,
       "offer": 5
@@ -345,7 +345,7 @@
     {
       "id": 15,
       "cat": "Digital",
-      "img": "/assets/digital/tablet.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/tablet.jpg",
       "title": "Tablet",
       "price": 100,
       "offer": 5
@@ -353,7 +353,7 @@
     {
       "id": 16,
       "cat": "Sports",
-      "img": "/assets/sports/bat-ball.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872003/project%20data/images/sports/bat-ball.jpg",
       "title": "Bat and Ball",
       "price": 100,
       "offer": 5
@@ -361,7 +361,7 @@
     {
       "id": 17,
       "cat": "Sports",
-      "img": "/assets/sports/badminton.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872020/project%20data/images/sports/badminton.jpg",
       "title": "Badminton",
       "price": 200,
       "offer": 5
@@ -369,7 +369,7 @@
     {
       "id": 18,
       "cat": "Sports",
-      "img": "/assets/sports/football.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872006/project%20data/images/sports/football.jpg",
       "title": "Football",
       "price": 100,
       "offer": 5
@@ -379,7 +379,7 @@
     {
       "id": 14,
       "cat": "Vegetables",
-      "img": "/assets/vegetables/potato.png",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872075/project%20data/images/vegetables/potato.png",
       "title": "Potato",
       "price": 100,
       "offer": 0
@@ -387,7 +387,7 @@
     {
       "id": 24,
       "cat": "Digital",
-      "img": "/assets/digital/mobile.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/mobile.jpg",
       "title": "Mobile",
       "price": 200,
       "offer": 0
@@ -395,7 +395,7 @@
     {
       "id": 12,
       "cat": "Fruits",
-      "img": "/assets/fruits/banana.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871973/project%20data/images/fruits/banana.jpg",
       "title": "Banana",
       "price": 200,
       "offer": 0
@@ -403,7 +403,7 @@
     {
       "id": 11,
       "cat": "Fruits",
-      "img": "/assets/fruits/apple.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871968/project%20data/images/fruits/apple.jpg",
       "title": "Apple",
       "price": 100,
       "offer": 0
@@ -411,7 +411,7 @@
     {
       "id": 26,
       "cat": "Sports",
-      "img": "/assets/sports/bat-ball.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872003/project%20data/images/sports/bat-ball.jpg",
       "title": "Bat and Ball",
       "price": 100,
       "offer": 0
@@ -419,10 +419,18 @@
     {
       "id": 1,
       "cat": "Fruits",
-      "img": "/assets/fruits/apple.jpg",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871968/project%20data/images/fruits/apple.jpg",
       "title": "Apple",
       "price": 100,
       "offer": 0
+    },
+    {
+      "id": 17,
+      "cat": "Sports",
+      "img": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872020/project%20data/images/sports/badminton.jpg",
+      "title": "Badminton",
+      "price": 200,
+      "offer": 5
     }
   ],
   "addressData": [
@@ -688,6 +696,19 @@
         "id": 9
       },
       "id": 18
+    },
+    {
+      "date": "2023-10-04T18:08:23.684Z",
+      "addObj": {
+        "username": "bhavesh bhai",
+        "homeNumber": "200",
+        "villageName": "Ayavej",
+        "pincode": "364510",
+        "districtName": "Bhavnagar",
+        "stateName": "Gujaratt",
+        "id": 9
+      },
+      "id": 19
     }
   ],
   "postOrderAddress": [
@@ -712,32 +733,32 @@
   "forImage": [
     {
       "categoryName": "Fruits",
-      "categoryImage": "/assets/fruits/fruits.jpg",
+      "categoryImage": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871968/project%20data/images/fruits/fruits.jpg",
       "id": 1
     },
     {
       "categoryName": "Vegetables",
-      "categoryImage": "/assets/vegetables/vegetable.jpg",
+      "categoryImage": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872063/project%20data/images/vegetables/vegetable.jpg",
       "id": 2
     },
     {
       "categoryName": "Cloths",
-      "categoryImage": "/assets/cloths/cloths.jpg",
+      "categoryImage": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871669/project%20data/images/cloths/cloths.jpg",
       "id": 3
     },
     {
       "categoryName": "Electronics",
-      "categoryImage": "/assets/electric/electric.jpg",
+      "categoryImage": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871939/project%20data/images/electric/electic.jpg",
       "id": 4
     },
     {
       "categoryName": "Digital",
-      "categoryImage": "/assets/digital/digital.jpg",
+      "categoryImage": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696871903/project%20data/images/digital/digital.jpg",
       "id": 5
     },
     {
       "categoryName": "Sports",
-      "categoryImage": "/assets/sports/sports.jpg",
+      "categoryImage": "https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872005/project%20data/images/sports/sports.jpg",
       "id": 6
     }
   ]

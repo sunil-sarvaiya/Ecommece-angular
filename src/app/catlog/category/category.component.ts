@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CategoryService } from '../service/category.service';
 import { CategoryImageService } from 'src/admin/service/category-image.service';
+import { CloudinaryService } from 'src/app/globle-service/cloudinary.service';
 
 @Component({
   selector: 'app-category',
@@ -26,25 +27,21 @@ export class CategoryComponent {
   ElectronicsCategory:any;
   DigitalCategory:any;
   SportsCategory:any;
+  _allData:any;
 
-  constructor(private service: CategoryService , private categoryImageService:CategoryImageService) {}
+  constructor(private service: CategoryService , private categoryImageService:CategoryImageService,private cloudinary:CloudinaryService) {}
 
   ngOnInit() {
-    this.getCategoryData();
-    this.getData();
-    this.getCategoryImage();
+  
     window.scrollTo(0, 0);
-  }
+    this.cloudinary.getAllData().subscribe((res)=>{
+      this._allData=res;
+      
+      this.categoryData = this._allData.categoryList;
 
-  getCategoryData() {
-    this.service.getCategoryData().subscribe((res) => {
-      this.categoryData = res;
-    });
-  }
-
-  getData() {
-    this.service.getProductDetails().subscribe((res) => {
-      this.object = res;  
+      this.object = this._allData?.productLists;  
+      
+      
           
       this.object.filter((item: any) => {
         item.cat;
@@ -55,12 +52,18 @@ export class CategoryComponent {
         );
         
       });
-    });
+
+      
+      
+
+    })
+    this.getCategoryImage();
   }
 
   getCategoryImage(){
-    this.categoryImageService.getCategoryImageData().subscribe((res)=>{
-      this.ImageData=res;
+      this.ImageData=this._allData.forImage;
+      
+      
 
             
       for (const item of this.ImageData) {
@@ -78,7 +81,7 @@ export class CategoryComponent {
       
  
    
-  })
+  
 }
 }
 

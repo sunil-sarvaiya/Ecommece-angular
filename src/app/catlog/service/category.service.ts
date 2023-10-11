@@ -5,34 +5,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CategoryService {
+  baseUrl = 'http://localhost:3000';
 
   constructor(private http:HttpClient) { }
 
-  // getProductDetails(){
-  //   return this.http.get("http://localhost:3000/productList");
-  // }
-
-  // getProductDetailsById(id:any){
-  //   return this.http.get(`http://localhost:3000/productList/${id}`);
-  // }
-
-  getCategoryDataById(catid:any){
-    return this.http.get(`http://localhost:3000/categoryList/${catid}`);
+  getCategoryDataById(catid: any) {
+    return this.http.get(`${this.baseUrl}/categoryList/${catid}`);
   }
-
-
-
-  getCategoryData(){
-    return this.http.get("http://localhost:3000/categoryList");
+  getCategoryData() {
+    return this.http.get(`${this.baseUrl}/categoryList`);
   }
-
-  getProductDetailsById(pid:any){
-    return this.http.get(`http://localhost:3000/productLists/${pid}`);
+  getProductDetailsById(pid: any) {
+    return this.http.get(`${this.baseUrl}/productLists/${pid}`);
   }
-
-  getProductDetails(){
-    return this.http.get("http://localhost:3000/productLists");
+  getProductDetails() {
+    return this.http.get(`${this.baseUrl}/productLists`);
   }
-
-  
 }

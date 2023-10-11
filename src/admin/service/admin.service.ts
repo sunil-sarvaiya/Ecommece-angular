@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
-import{HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
+  private baseUrl = 'http://localhost:3000';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  adminRegistrationData(data:any){
-  return this.http.post("http://localhost:3000/adminRegistrationData",data)
-
-
+  adminRegistrationData(data: any) {
+    const url = `${this.baseUrl}/adminRegistrationData`;
+    return this.http.post(url, data);
   }
-  adminLoginData(){
-  return this.http.get("http://localhost:3000/adminRegistrationData")
-
-
+  adminLoginData() {
+    const url = `${this.baseUrl}/adminRegistrationData`;
+    return this.http.get(url);
   }
 }

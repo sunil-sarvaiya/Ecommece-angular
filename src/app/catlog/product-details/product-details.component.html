@@ -13,15 +13,15 @@
 
 
 <div class="row m-5 justify-content-center ">
-  <div class="col-md-3 m-3" *ngFor="let category of categoryList">
+  <div class="col-md-3 m-3" >
     <div class="card shadow">
       <div class="card-body main">
-          <img src={{category.img}} class="img-fluid shadow">
-          <h3 class="card-title">Name: {{ category.title }}</h3>
-          <h6 class="card-title">Category: {{category.cat}}</h6>
-          <p class="card-text">Price: {{ category.price |currency:'INR' }}</p>
-          <p class="card-text">offer: {{category.offer}}</p>
-          <button class="btn btn-primary" (click)="addDataToCart(category)">Add to cart</button>
+          <img src={{categoryList.img}} class="img-fluid shadow" alt="image not found">
+          <h3 class="card-title">Name: {{ categoryList.title }}</h3>
+          <h6 class="card-title">Category: {{categoryList.cat}}</h6>
+          <p class="card-text">Price: {{ categoryList.price |currency:'INR' }}</p>
+          <p class="card-text">offer: {{categoryList.offer}}</p>
+          <button class="btn btn-primary" (click)="addDataToCart(categoryList)">Add to cart</button>
         </div>
     </div>
   </div>

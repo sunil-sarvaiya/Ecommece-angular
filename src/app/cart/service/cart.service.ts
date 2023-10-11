@@ -6,34 +6,32 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
+  private baseUrl = 'http://localhost:3000';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  postCartData(data:any){
-    return this.http.post("http://localhost:3000/cartData/",data)
+  postCartData(data: any): Observable<any> {
+    const url = `${this.baseUrl}/cartData/`;
+    return this.http.post(url, data);
   }
-
-  getCartData(){
-    return this.http.get("http://localhost:3000/cartData")
+  getCartData(): Observable<any> {
+    const url = `${this.baseUrl}/cartData`;
+    return this.http.get(url);
   }
-
-
   deleteCartItem(itemId: number): Observable<any> {
-    const url = `http://localhost:3000/cartData/${itemId}`;
+    const url = `${this.baseUrl}/cartData/${itemId}`;
     return this.http.delete(url);
   }
-
-  postOrderDetails(data:any){
-    return this.http.post("http://localhost:3000/orderDetails",data)
+  postOrderDetails(data: any): Observable<any> {
+    const url = `${this.baseUrl}/orderDetails`;
+    return this.http.post(url, data);
   }
-
- 
-
-  getOrderDetails(){
-    return this.http.get("http://localhost:3000/orderDetails")
+  getOrderDetails(): Observable<any> {
+    const url = `${this.baseUrl}/orderDetails`;
+    return this.http.get(url);
   }
-
-  getAddressDataById(id:any){
-      return this.http.get(`http://localhost:3000/addressData/${id}`);
+  getAddressDataById(id: any): Observable<any> {
+    const url = `${this.baseUrl}/addressData/${id}`;
+    return this.http.get(url);
   }
 }

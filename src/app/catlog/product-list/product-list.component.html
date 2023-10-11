@@ -1,14 +1,13 @@
-<div *ngFor="let category of categoryList">
   <div class="row m-5 justify-content-center ">
-    <div class="col-sm-3 m-5" *ngFor="let product of category.productList">
+    <div class="col-sm-3 m-5" *ngFor="let product of categoryList">
       <div class="card shadow">
         <div class="card-body main">
           <img src={{product.img}} class="img-fluid">
           <h3 class="card-title">{{ product.title }}</h3>
           <p class="card-text">Price: {{ product.price |currency:'INR' }}</p>
+          <h1>{{product.pid}}</h1>
           <button routerLink="/catlog/product-details/{{product.pid}}" class="btn btn-primary">show details</button>
         </div>
       </div>
     </div>
   </div>
-</div>

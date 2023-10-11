@@ -7,37 +7,25 @@ import { CartService } from 'src/app/cart/service/cart.service';
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent {
+  ordersDetail: any = [];
+  cartData: any = [];
 
-  ordersDetail:any=[];
-  cartData:any=[];
-
-  constructor(private cart:CartService){
-
-
+  constructor(private cart: CartService) {
   }
 
-ngOnInit(){
-  this.getOrderDetails();
-  this.getCartData();
+  ngOnInit() {
+    this.getOrderDetails();
+    this.getCartData();
+  }
 
-}
-
-
-  
   getOrderDetails() {
     this.cart.getOrderDetails().subscribe((res) => {
-      this.ordersDetail =(res) ;
-      console.log("date",this.ordersDetail);
-
+      this.ordersDetail = (res);
     })
   }
-
-  getCartData(){
-    this.cart.getCartData().subscribe((res)=>{
-      console.log("cart data",res);
-      this.cartData=res;
-      
+  getCartData() {
+    this.cart.getCartData().subscribe((res) => {
+      this.cartData = res;
     })
   }
-
 }

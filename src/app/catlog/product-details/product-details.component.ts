@@ -5,6 +5,7 @@ import { toArray } from 'rxjs';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CartService } from 'src/app/cart/service/cart.service';
+import { CloudinaryService } from 'src/app/globle-service/cloudinary.service';
 
 
 @Component({
@@ -13,77 +14,46 @@ import { CartService } from 'src/app/cart/service/cart.service';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent {
-
   productIdd: any;
   categoryList: any = [];
   cart: any;
   myCartData: any;
-
-  ngOnInit() {
-    this.forProductDetails();
-    // this.getData();
-    this.getProductData();
-    window.scrollTo(0, 0);
-
-  }
+  _allData: any;
 
   constructor(
     private service: CategoryService,
     private route: ActivatedRoute,
     private router: Router,
     private toastr: ToastrService,
-    private cartt: CartService
+    private cartt: CartService,
+    private cloudinaryService: CloudinaryService
   ) {
 
   }
-
+  ngOnInit() {
+    window.scrollTo(0, 0);
+    this.cloudinaryService.getAllData().subscribe((res) => {
+      this._allData = res
+      this.forProductDetails();
+      this.getProductData();
+    })
+  }
   forProductDetails() {
     this.productIdd = this.route.snapshot.params['id'];
+    console.log(this.productIdd);
+    console.log(this._allData.productLists[this.productIdd-1]);
+
   }
-
-  // getData(){
-  //   this.service.getProductDetails().subscribe((res)=>{
-  //     // this.productData=res;
-  //   console.log("all product-data",res);
-  //     })
-  // }
-
-
   getProductData() {
-    this.service.getProductDetailsById(this.productIdd).pipe(toArray()).subscribe((res) => {
-      // console.log("product-data",this.productData);
-      this.categoryList = res;
-
-    })
-    
+      this.categoryList = this._allData.productLists[this.productIdd-1];
   }
-
-
-  addDataToCart(data:any) {
+  addDataToCart(data: any) {
     this.cartt.postCartData(data).subscribe((res) => {
       this.router.navigate(['/cart/cartData'])
       this.toastr.success("added successfully!!")
     },
-    (error)=>{
-      this.toastr.error("already item in cart !!")
-    })
-    
-
-    
+      (error) => {
+        this.toastr.error("already item in cart !!")
+      })
   }
-
-
-  // addToCart() {
-  //   this.service.getProductDetailsById(this.productIdd).subscribe((res) => {      
-  //     this.cart = res;
-  //     console.log("khabar nay ",this.cart);
-  //   this.myCartData = this.cart;
-  //   console.log("for local",this.myCartData);
-  //   localStorage.setItem("myCartData", JSON.stringify(this.myCartData));
-  //   this.toastr.success("data added in cart successfully!!");
-  //   this.router.navigate(['/cart/cartData']);
-  //   })
-  // }
-
-
 }

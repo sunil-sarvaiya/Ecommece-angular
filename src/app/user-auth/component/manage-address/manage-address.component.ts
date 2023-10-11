@@ -9,13 +9,12 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./manage-address.component.scss']
 })
 export class ManageAddressComponent {
-
   addressData: any = [];
   addressId: any;
   userForm: any;
   AddressDataForUpdate: any;
-  forUpdateButton:boolean=false;
-  forSubmitButton:boolean=true;
+  forUpdateButton: boolean = false;
+  forSubmitButton: boolean = true;
 
   constructor(private user: UserService, private toastr: ToastrService) { }
 
@@ -23,7 +22,6 @@ export class ManageAddressComponent {
     this.formData();
     this.getAddressData();
   }
-
   formData() {
     this.userForm = new FormGroup({
       username: new FormControl('', Validators.required),
@@ -33,9 +31,7 @@ export class ManageAddressComponent {
       districtName: new FormControl('', Validators.required),
       stateName: new FormControl('', Validators.required)
     });
-
   }
-
   onSubmit(data: any) {
     this.user.postAddress(data).subscribe((res) => {
       this.userForm.reset();
@@ -43,25 +39,21 @@ export class ManageAddressComponent {
       this.getAddressData();
     })
   }
-
   getAddressData() {
     this.user.getAddress().subscribe((res) => {
       this.addressData = res;
     })
   }
-
   deleteAddress(id: any) {
     this.user.deleteAddress(id).subscribe((res) => {
       this.getAddressData();
       this.toastr.success("address deleted successfully!!")
     })
   }
-
   updateAddress(item: any) {
-    this.forUpdateButton=true;
-    this.forSubmitButton=false;
-
-    this.addressId=item.id;
+    this.forUpdateButton = true;
+    this.forSubmitButton = false;
+    this.addressId = item.id;
     if (item) {
       this.AddressDataForUpdate = item;
       this.userForm.setValue({
@@ -74,21 +66,12 @@ export class ManageAddressComponent {
       })
     }
   }
-
-  UpdateData(data:any){
-    this.forUpdateButton=false;
-    this.forSubmitButton=true;
-   
-    
-    this.user.updateAddress(this.addressId,data,).subscribe((res) => {
+  UpdateData(data: any) {
+    this.forUpdateButton = false;
+    this.forSubmitButton = true;
+    this.user.updateAddress(this.addressId, data,).subscribe((res) => {
       this.getAddressData();
       this.userForm.reset();
     })
-
-  
-
-
   }
-
-
 }
