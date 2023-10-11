@@ -26,10 +26,10 @@ const routes: Routes = [
     path: 'cart',
     loadChildren: () => import('./cart/cart.module').then(p => p.CartModule)
   },
-  {
-    path: 'admin',
-    loadChildren: () => import('../admin/admin.module').then(a => a.AdminModule)
-  },
+  // {
+  //   path: 'admin',
+  //   loadChildren: () => import('../admin/admin.module').then(a => a.AdminModule)
+  // },
   {
     path: '**',
     component: PageNotFoundComponent

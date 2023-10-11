@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { CloudinaryService } from 'src/app/globle-service/cloudinary.service';
 
 @Component({
   selector: 'app-login',
@@ -14,10 +15,16 @@ export class LoginComponent {
   registerData: any = [];
   username: any;
   password: any;
+  _allData:any;
 
-  constructor(private service: UserService, private router: Router, private toastr: ToastrService) { }
+  constructor(private service: UserService, private router: Router, private toastr: ToastrService ,private cloudinaryService:CloudinaryService) { }
   ngOnInit() {
+   
     this.loginInfo();
+
+    this.cloudinaryService.getAllData().subscribe((res)=>{
+this._allData=res;      
+    })
   }
 
   loginInfo() {
@@ -35,8 +42,7 @@ export class LoginComponent {
   }
 
   logInData() {
-    this.service.loginData().subscribe((res) => {
-      this.registerData = res;
+      this.registerData = this._allData.registrationData;    
       this.registerData.forEach((item: any) => {
         if (item.username == this.username && item.password == this.password) {
           localStorage.setItem('logindata', JSON.stringify(item))
@@ -48,11 +54,8 @@ export class LoginComponent {
         else {
           this.toastr.error("enter valid data!!")
         }
-      })
     },
-      (err) => {
-        console.log(err);
-      }
+    
     )
   }
 }

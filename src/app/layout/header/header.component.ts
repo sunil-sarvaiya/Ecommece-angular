@@ -16,6 +16,7 @@ export class HeaderComponent {
   count: any;
   id: any;
   searchResult: any;
+  userName:any;
   constructor(
     private router: Router,
     private cart: CartService,

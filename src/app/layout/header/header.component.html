@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
 
-  <img src="https://res.cloudinary.com/dj7m5tuv9/image/upload/v1696872188/project%20data/images/extra/logo.png" class="logo" alt="logo" routerLink="/">
+  <img src="https://res.cloudinary.com/dj7m5tuv9/image/upload/v1697040989/project%20data/images/extra/logo_nu2ipa.jpg" class="logo" alt="logo" routerLink="/">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +39,18 @@
             class="fa fa-shopping-cart" aria-hidden="true"></i> <sup class="badge">{{count}}</sup> </a>
       </li>
 
+      <li class="nav-item" *ngIf="!forbutton">
+        <a class="nav-link text-white" routerLink="user-auth/register" routerLinkActive="active">Register</a>
+      </li>
+
+      <li class="nav-item" *ngIf="!forbutton">
+        <a class="nav-link text-white" routerLink="user-auth/login" routerLinkActive="active">Login</a>
+      </li>
+
+
       <!-- if not user  -->
 
-      <li class="nav-item " *ngIf="!forbutton">
+      <!-- <li class="nav-item " *ngIf="!forbutton">
         <div class="dropdown">
           <button class="btn  dropdown-toggle navbar-brand" type="button" id="dropdownMenuButton"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Register
@@ -63,7 +72,7 @@
             <a class="dropdown-item" routerLink="admin/admin-login"> Admin</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- if user  -->
 
